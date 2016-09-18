@@ -4,7 +4,7 @@
 /**
  * @name lazyLoad
  * @description 懒加载
- * @param nodeList 节点集合或者单个节点
+ * @param {HTMLImageElement|HTMLCollection} nodeList 节点集合或者单个节点
  * @param {Object} opts
  * @example
  *
