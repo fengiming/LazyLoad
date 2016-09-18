@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>懒加载-lazyLoad</title>
+    <style>
+        ul>li{
+            width:251px;
+            margin:0 10px 20px auto;
+            height:192px ;
+            float:left;
+
+        }
+        ul img{
+            width:100% ;
+            height:100% ;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <img data-lazy-src="imgs/Chrysanthemum.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Desert.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Hydrangeas.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Jellyfish.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Koala.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Lighthouse.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Penguins.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Tulips.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Chrysanthemum.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Desert.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Hydrangeas.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Jellyfish.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Koala.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Lighthouse.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Penguins.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Tulips.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Chrysanthemum.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Desert.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Hydrangeas.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Jellyfish.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Koala.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Lighthouse.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Penguins.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Tulips.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Chrysanthemum.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Desert.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Hydrangeas.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Jellyfish.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Koala.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Lighthouse.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Penguins.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Tulips.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Chrysanthemum.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Desert.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Hydrangeas.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Jellyfish.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Koala.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Lighthouse.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Penguins.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Tulips.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Chrysanthemum.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Desert.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Hydrangeas.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Jellyfish.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Koala.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Lighthouse.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Penguins.jpg" alt=""/>
+    </li>
+    <li>
+        <img data-lazy-src="imgs/Tulips.jpg" alt=""/>
+    </li>
+</ul>
+<script src="js/jquery.js"></script>
+<script src="js/Util.js"></script>
+<script src="js/LazyLoad.js"></script>
+<script>
+    /* 图片懒加载 */
+    lazyLoad(document.querySelectorAll ? document.querySelectorAll('img'):document.getElementsByTagName('img'),{
+        threshold:-150, // 距离底部多少开始加载
+        srcAttr:'data-lazy-src',
+        animate:true,
+        animatePro:{
+            opacity:1
+        },
+        animateOpts:{
+            duration:500,
+            easing:'linear'
+        }
+    }) ;
+</script>
+</body>
+</html>
