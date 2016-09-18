@@ -5,6 +5,7 @@
 lazyLoad(nodeList,opts) 
 
 #参数说明
+
 nodeList 节点列表或者单个节点
 opts 懒加载选项
 
