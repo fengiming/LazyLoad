@@ -5,7 +5,7 @@
  * @name lazyLoad
  * @description 懒加载
  * @param nodeList 节点集合或者单个节点
- * @parma {Object} opts
+ * @param {Object} opts
  * @example
  *
  * lazyLoad($('img'),{
@@ -24,7 +24,7 @@ var lazyLoad = (function () {
         lazyOpts,
         _isImageNode,
         _isImageNodeList;
-    /* 默认懒加载选项 */
+    // 默认懒加载选项
     lazyOpts = {
         threshold: 0, // 距离底部多少开始加载
         srcAttr: 'data-lazy-src', // 图片地址属性
@@ -37,8 +37,8 @@ var lazyLoad = (function () {
         var box = elt && elt.getBoundingClientRect();
         var windowH = $(window).height();
         /*
-         图片上边缘减去临界值在窗口底部之上 或者 图片下边缘减去临界值在窗口底部之上 返回 true
-         否则返回false
+         * 图片上边缘减去临界值在窗口底部之上 或者 图片下边缘减去临界值在窗口底部之上 返回 true
+         * 否则返回false
          */
         if ((box.top - lazyOpts.threshold) <= windowH
             || (box.bottom - lazyOpts.threshold) <= windowH) {
@@ -74,7 +74,7 @@ var lazyLoad = (function () {
         }
         return true;
     };
-    /* 返回一个合法的节点nodeList */
+    // 返回一个合法的节点nodeList 
     _nomalizeNodeList = function (nodeList) {
         if ('length' in nodeList && _isImageNodeList(nodeList)) {
             return nodeList;
@@ -84,7 +84,7 @@ var lazyLoad = (function () {
         }
         return [];
     };
-
+    // 懒加载实现逻辑
     _lazyLoad = function (nodeList, opts) {
         var elems = [];
         if (!nodeList) {
